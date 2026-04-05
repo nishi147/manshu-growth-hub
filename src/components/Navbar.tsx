@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import AnnouncementTicker from "./AnnouncementTicker";
 
 const navLinks = [
   { label: "About", href: "#about" },
@@ -13,7 +14,9 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 glass shadow-sm">
+    <div className="fixed top-0 left-0 right-0 z-50">
+      <AnnouncementTicker />
+      <header className="glass shadow-sm">
       <nav className="container mx-auto flex items-center justify-between px-4 py-3 md:py-4">
         <a href="#" className="flex items-center gap-2">
           <img src="/logo_manshu.png" alt="Manshu Learning" className="h-10 md:h-12" />
@@ -71,5 +74,6 @@ export default function Navbar() {
         </div>
       )}
     </header>
+    </div>
   );
 }
