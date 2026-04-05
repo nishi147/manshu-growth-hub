@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import AnnouncementTicker from "./AnnouncementTicker";
 
 const navLinks = [
   { label: "About", href: "#about" },
